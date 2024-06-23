@@ -1,0 +1,44 @@
+body {
+  background-color: black !important;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
+.spinners {
+  height: calc(100vh - 64px);
+}
+
+.rate-p {
+  font-size: 12px;
+}
+
+.rate-icon {
+  color: #ffab31;
+  font-size: 12px;
+}
+
+.card img:hover {
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+
+img:hover {
+  transform: scale(1.1  );
+  -webkit-transform: scale(1.1  );
+  -moz-transform: scale(1.1  );
+  -ms-transform: scale(1.1  );
+  -o-transform: scale(1.1  );
+}
