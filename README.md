@@ -1,70 +1,154 @@
-# Getting Started with Create React App
+# Trending Movies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [About](#about)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [API](#api)
+- [Setup and Installation](#setup-and-installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-In the project directory, you can run:
+## About
 
-### `npm start`
+Trending Movies is a web application built with React that displays trending movies, TV shows, and trending persons. The application uses the Context API for state management and an external API to fetch the trending data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Display trending movies
+- Display trending TV shows
+- Display trending persons
+- Responsive design for mobile and desktop
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend:**
+  - React
+  - JavaScript (ES6+)
+  - HTML5
+  - CSS3
+- **State Management:**
+  - React Context API
+- **HTTP Client:**
+  - Axios (or fetch API)
+- **Other Libraries:**
+  - React Router (for navigation)
 
-### `npm run build`
+## API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project uses the [TMDb (The Movie Database) API](https://www.themoviedb.org/documentation/api). You need to sign up and get an API key to use their services.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setup and Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+Make sure you have the following installed:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/youssefkhaled23/Trending-Movies.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd trending-movies
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+   or if you're using Yarn:
+   ```bash
+   yarn install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Setting Up the API Key
 
-## Learn More
+1. Create a `.env` file in the root directory of the project.
+2. Add your TMDb API key to the `.env` file:
+   ```
+   REACT_APP_TMDB_API_KEY=your_api_key_here
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Running the Application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Start the development server:
+   ```bash
+   npm start
+   ```
+   or with Yarn:
+   ```bash
+   yarn start
+   ```
+2. Open your browser and navigate to `http://localhost:3000`
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Navigating Between Sections:**
+   - Use the navigation bar to switch between trending movies, TV shows, and persons.
 
-### Analyzing the Bundle Size
+2. **Viewing Details:**
+   - Click on a movie, TV show, or person to view more details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Project Structure
 
-### Making a Progressive Web App
+```
+trending-movies/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── MovieCard.js
+│   │   ├── TVShowCard.js
+│   │   ├── PersonCard.js
+│   │   └── ...
+│   ├── context/
+│   │   ├── AppContext.js
+│   │   └── AppReducer.js
+│   ├── pages/
+│   │   ├── Movies.js
+│   │   ├── TVShows.js
+│   │   ├── Persons.js
+│   │   └── ...
+│   ├── services/
+│   │   └── api.js
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── .env
+├── package.json
+├── README.md
+└── ...
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+Contributions are welcome! Please follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add new feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a Pull Request.
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-### `npm run build` fails to minify
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Author:** YoussefKhaled
+- **Email:** khaledalsbaa2@gmail.com
+- **GitHub:** [youssefkhaled23](https://github.com/youssefkhaled23)
+
+---
+
+Feel free to customize this template according to your specific project details, such as adding any additional features, dependencies, or instructions relevant to your Trending Movies application.
