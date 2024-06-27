@@ -11,7 +11,7 @@ export default function App() {
       path: "",
       element: <Layout />,
       children: [
-        { index: true, element: <Home /> },
+        { path: "/", element: <Home /> },
         { path: "Movie", element: <Movie /> },
         { path: "Tv", element: <Tv /> },
         { path: `About/:type/:id`, element: <Descrption /> },
