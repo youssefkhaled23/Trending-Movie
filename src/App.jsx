@@ -1,6 +1,7 @@
 import {
   RouterProvider,
-  createBrowserRouter,
+  // createBrowserRouter,
+  createHashRouter,
 } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";
 import Home from "./Components/Home/Home";
@@ -9,7 +10,7 @@ import Tv from "./Components/Tv/Tv";
 import Descrption from "./Components/Descrption/Descrption";
 export default function App() {
   // Create The React-Router
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: <Layout />,
