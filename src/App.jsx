@@ -10,7 +10,7 @@ export default function App() {
     {
       path: "/",
       element: <Layout />,
-      children: [
+      children: [ق
         { index: true, element: <Home /> },
         { path: "Movie", element: <Movie /> },
         { path: "Tv", element: <Tv /> },
